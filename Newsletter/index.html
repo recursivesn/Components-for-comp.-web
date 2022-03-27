@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join our newsletter</title>
+  </head>
+  <body>
+    <div class="sub-section">
+      <div class="align-this-center">
+        <div class="flex-this">
+          <div class="one-side-info">
+            <h2>Join our newsletter</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Rem culpa amet magnam
+              maiores numquam,
+            </p>
+          </div>
+          <div class="another-sideform">
+            <input
+              class="inputbox"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button id="btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var btn = document.getElementById("btn");
+    let flexthis = document.querySelector(".flex-this");
+    let emailbox = document.querySelector(".inputbox");
+    btn.addEventListener("click", (e) => {
+      let whosub = document.querySelector(".inputbox").value;
+      e.preventDefault();
+      if (emailbox == "") {
+        alert("unable to subscribe");
+      } else {
+        let newp = document.createElement("p");
+        newp.innerHTML = `<h1 class="success-center">Subcribed successfully,  <span>using ${whosub}</span></h1>`;
+        flexthis.innerHTML = newp.innerHTML;
+      }
+    });
+  </script>
+</html>
